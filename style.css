@@ -1,0 +1,169 @@
+body {
+    overflow: hidden;
+}
+
+.canvas {
+    position: relative;
+    /* top: 50vh; */
+    width: 345px;
+    z-index: -2;
+    height: 600px;
+    background-image: url(assets/city_1.jpg);
+    margin: auto;
+    background-position: center;
+    /* overflow: hidden; */
+}
+
+.spider {
+    position: absolute;
+    bottom: 80px;
+}
+
+.spider img {
+    width: 80px;
+}
+
+.aniSpider {
+    animation: aniSpider 750ms linear;
+}
+
+@keyframes aniSpider {
+    0% {
+        bottom: 80px;
+    }
+    35% {
+        bottom: 200px;
+    }
+    60% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 80px;
+    }
+}
+
+.weapon {
+    position: absolute;
+    bottom: 40px;
+    left: 70px;
+    display: none;
+}
+
+.weapon img {
+    width: 40px;
+}
+
+.aniWeapon {
+    display: block;
+    animation: aniWeapon 500ms linear;
+}
+
+@keyframes aniWeapon {
+    100% {
+        left: 500px;
+    }
+}
+
+.road {
+    position: absolute;
+    bottom: -5vh;
+    /* width: 300vw; */
+    width: 1550px;
+    height: 150px;
+    background-image: url(assets/road.jpg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: moveRoad linear 3.5s infinite;
+}
+
+@keyframes moveRoad {
+    50% {
+        /* transform: translateY(-1vh); */
+        transform: translateX(-100vw);
+    }
+    100% {
+        /* transform: translateY(0vh); */
+        transform: translateX(-200vw);
+    }
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 110px;
+    left: 550px;
+    /* right: -80px; */
+}
+
+.obstacle img {
+    width: 70px;
+}
+
+.aniObstacle {
+    animation: aniObstacle 2s linear infinite;
+}
+
+@keyframes aniObstacle {
+    100% {
+        left: -100px;
+        /* right: 360px; */
+    }
+}
+
+.jump {
+    position: fixed;
+    bottom: 20vh;
+    right: 10vw;
+    width: 80px;
+}
+
+.shoot {
+    position: fixed;
+    bottom: 20vh;
+    left: 10vw;
+    width: 80px;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    z-index: 3;
+    position: fixed;
+    top: 25vh;
+    left: 25vw;
+    width: 30vw;
+    margin-top: 10vh;
+}
+
+#result {
+    position: absolute;
+    top: 15vh;
+    font-size: x-large;
+    background-color: rgb(129, 129, 238);
+    color: red;
+}
+
+#backg {
+    display: none;
+    z-index: 2;
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 150%;
+    width: 150%;
+    background-color: rgba(0, 0, 0, 0.377);
+    backdrop-filter: blur(3px);
+}
+
+.cloud {
+    position: absolute;
+    bottom: 410px;
+    /* background-color: red; */
+    left: 350px;
+    animation: aniObstacle 20s linear infinite;
+    /* right: -80px; */
+}
+
+.cloud img {
+    width: 70px;
+}
