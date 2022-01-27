@@ -1,5 +1,9 @@
 body {
     overflow: hidden;
+    background-image: url(assets/bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3000px 3000px;
 }
 
 .canvas {
@@ -11,7 +15,20 @@ body {
     background-image: url(assets/city_1.jpg);
     margin: auto;
     background-position: center;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+#score {
+    width: fit-content;
+    position: relative;
+    padding: 5px;
+    left: 210px;
+    color: red;
+    font-size: large;
+    width: 150px;
+    height: 20px;
+    background-color: rgba(0, 0, 255, 0.493);
+    border: red 2px solid;
 }
 
 .spider {
@@ -73,7 +90,7 @@ body {
     background-image: url(assets/road.jpg);
     background-repeat: repeat-x;
     background-size: cover;
-    animation: moveRoad linear 3.5s infinite;
+    animation: moveRoad linear 2.8s infinite;
 }
 
 @keyframes moveRoad {
@@ -128,7 +145,7 @@ li {
     text-align: center;
     z-index: 3;
     position: fixed;
-    top: 25vh;
+    top: 35vh;
     left: 25vw;
     width: 30vw;
     margin-top: 10vh;
@@ -138,8 +155,9 @@ li {
     position: absolute;
     top: 15vh;
     font-size: x-large;
-    background-color: rgb(129, 129, 238);
     color: red;
+    background-color: rgba(0, 0, 255, 0.493);
+    border: red 2px solid;
 }
 
 #backg {

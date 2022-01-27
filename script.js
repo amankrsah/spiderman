@@ -46,12 +46,13 @@ setInterval(() => {
     offsetObs = Math.abs(wx - ox);
 
     if ((offsetObs < 58) && offsetObs > 10 && shoot) {
-        document.getElementById("msg").innerHTML = "Collosion"
+        // document.getElementById("msg").innerHTML = "Collosion"
         setTimeout(() => {
             shoot = false
         }, 5);
-    } else
-        document.getElementById("msg").innerHTML = "MSG"
+    }
+    // else
+    // document.getElementById("msg").innerHTML = "MSG"
 }, 100);
 
 
