@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="gameOver(0)">
     <div style="display: none;" id="backg"></div>
     <div class="canvas">
         <div id="score">Your Score : 0</div>
@@ -41,6 +41,7 @@
 
     </div>
     <ul style="display: none" id="menu">
+        <li id="warn"></li>
         <li id="result">Score: </li>
         <li onclick="defaultValues()"><img src="assets/Retry.svg" alt=""></li>
     </ul>

@@ -1,12 +1,20 @@
-spider = document.querySelector(".spider")
-obstacle = document.querySelector('.obstacle')
-weapon = document.querySelector('.weapon')
+spider = document.querySelector(".spider");
+obstacle = document.querySelector('.obstacle');
+weapon = document.querySelector('.weapon');
 score = document.querySelector(".score");
-cross = true
-score = 0
-finalScore = 0
-menu = false
-shoot = false
+cross = true;
+score = 0;
+finalScore = 0;
+menu = false;
+shoot = false;
+
+
+// Audio for game
+audioGameover = new Audio('assets/roundComplt.wav')
+audioJump = new Audio('assets/Jump.wav')
+audioShoot = new Audio('assets/Shoot.wav')
+
+
 
 document.onkeydown = function(k) {
     console.log("Keycode is : ", k.keyCode);
@@ -23,11 +31,15 @@ document.onkeydown = function(k) {
 function controls(p) {
     if (p == 38 || p == 32) {
         spider.classList.add("aniSpider")
+        audioJump.currentTime = 0;
+        audioJump.play();
         setTimeout(() => {
             spider.classList.remove("aniSpider")
         }, 800);
 
     } else if (p == 13) {
+        audioShoot.currentTime = 0;
+        audioShoot.play();
         shoot = true
         weapon.classList.add("aniWeapon")
         setTimeout(() => {
@@ -96,7 +108,13 @@ function updateScore(score) {
 }
 
 function gameOver(finalScore) {
-    document.getElementById("result").innerHTML = "Your Score<br>" + score;
+    audioGameover.currentTime = 0;
+    audioGameover.play();
+    if (finalScore == 0) {
+        document.getElementById("result").innerHTML = "The web is not working......!!!";
+    } else {
+        document.getElementById("result").innerHTML = "Your Score<br>" + score;
+    }
     document.getElementById("backg").setAttribute("style", "display:block")
     document.getElementById("menu").setAttribute("style", "display:block")
     obstacle.classList.remove("aniObstacle")
