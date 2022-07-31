@@ -106,7 +106,6 @@ body {
     position: absolute;
     bottom: 110px;
     left: 550px;
-    /* right: -80px; */
 }
 
 .obstacle img {
@@ -143,7 +142,7 @@ li {
     text-align: center;
     z-index: 3;
     position: fixed;
-    bottom: 25vh;
+    top: 25vh;
     left: 35vw;
     margin: auto;
     width: 30vw;
@@ -152,7 +151,7 @@ li {
 
 #result {
     position: absolute;
-    bottom: 85vh;
+    top: 5vh;
     font-size: x-large;
     height: fit-content;
     color: red;
