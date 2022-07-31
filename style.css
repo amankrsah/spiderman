@@ -85,7 +85,7 @@ body {
     position: absolute;
     bottom: -5vh;
     /* width: 300vw; */
-    width: 1550px;
+    width: 1900px;
     height: 150px;
     background-image: url(assets/road.jpg);
     background-repeat: repeat-x;
@@ -95,12 +95,10 @@ body {
 
 @keyframes moveRoad {
     50% {
-        /* transform: translateY(-1vh); */
-        transform: translateX(-100vw);
+        transform: translateX(-725px);
     }
     100% {
-        /* transform: translateY(0vh); */
-        transform: translateX(-200vw);
+        transform: translateX(-1550px);
     }
 }
 
@@ -145,19 +143,23 @@ li {
     text-align: center;
     z-index: 3;
     position: fixed;
-    top: 35vh;
-    left: 25vw;
+    bottom: 25vh;
+    left: 35vw;
+    margin: auto;
     width: 30vw;
     margin-top: 10vh;
 }
 
 #result {
     position: absolute;
-    top: 15vh;
+    bottom: 85vh;
     font-size: x-large;
+    height: fit-content;
     color: red;
-    background-color: rgba(0, 0, 255, 0.493);
+    font-weight: bold;
+    background-color: rgba(0, 0, 255, 0.693);
     border: red 2px solid;
+    border-radius: 8px;
 }
 
 #backg {
